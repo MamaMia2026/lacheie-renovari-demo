@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>LaCheie — renovări la cheie</title>
+<meta name="description" content="LaCheie – renovări la cheie pentru băi, bucătării, apartamente și case: calculator de preț orientativ, proiecte înainte/după, garanție 5 ani și cerere de ofertă cu poze.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1e1d1b">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/clip1.webp" as="image" fetchpriority="high">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<p class="demo-bar"><span><b>Machetă demo</b>– prețuri, proiecte și date de exemplu</span></p>
+
+<header class="hdr"><div class="wrap">
+<a class="logo" href="#acasa" aria-label="LaCheie – renovări la cheie, începutul paginii"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3 20 3M16.5 6.5l2.5 2.5M14 9l2 2"/></svg></span><span class="w"><b>La<span>Cheie</span></b><small>renovări la cheie</small></span></a>
+<nav class="pill" id="meniu" aria-label="Meniu"><a href="#calculator">Calculator</a><a href="#proiecte">Proiecte</a><a href="#etape">Etape</a><a href="#garantie">Garanție</a><a href="#recenzii">Recenzii</a><a href="#oferta">Ofertă</a></nav>
+<a class="btn cta" href="#oferta">Cere ofertă</a>
+</div></header>
+
+<main>
+<section class="hero" id="acasa"><div class="wrap">
+<div class="copy">
+<p class="kick"><b>Renovări la cheie</b><span class="loc"> · [Oraș] și împrejurimi</span></p>
+<h1>Din <s>înainte</s><br>în <em>după.</em></h1>
+<p class="lead">Băi, bucătării, apartamente și case renovate complet de LaCheie, cu o singură echipă, un singur contract și termen scris. Afli într-un minut un preț orientativ.</p>
+<div class="acts"><a class="btn btn-t" href="#calculator">Calculează renovarea</a><a class="btn btn-l" href="https://wa.me/40700000000" data-wa="hero" target="_blank" rel="noopener">Trimite poze pe WhatsApp</a></div>
+<dl class="figs"><div><dt>lucrări predate</dt><dd>320+</dd></div><div><dt>garanție scrisă</dt><dd>5 ani</dd></div><div><dt>baie la cheie</dt><dd>14 zile</dd></div></dl>
+</div>
+<div class="view">
+<figure class="frame" style="margin:0"><video muted loop playsinline preload="none" poster="img/clip1.webp" width="720" height="1038" aria-hidden="true" id="hero-video"><source data-src="img/clip1.webm" type="video/webm"><source data-src="img/clip1.mp4" type="video/mp4"></video><figcaption class="phase" id="phase">Înainte</figcaption></figure>
+<div class="prog" aria-hidden="true"><div class="track"><div class="fill" id="prog-fill"></div></div><div class="labels"><span class="on" data-lbl="0">Înainte</span><i></i><span data-lbl="1">După</span></div></div>
+</div>
+</div></section>
+
+<section class="calc" id="calculator"><div class="wrap">
+<div class="sh"><span class="no">01</span><h2>Cât costă renovarea?</h2><p>Un interval orientativ de preț și de durată. Prețul exact îl primești după o vizită gratuită.</p></div>
+<div class="calc-grid">
+<form class="ctl" id="calc" aria-label="Calculator orientativ">
+<fieldset><legend>Ce renovăm</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="tip" value="baie" checked><span>Baie<small>2–20 m²</small></span></label>
+<label class="opt"><input type="radio" name="tip" value="bucatarie"><span>Bucătărie<small>4–30 m²</small></span></label>
+<label class="opt"><input type="radio" name="tip" value="apartament"><span>Apartament complet<small>25–200 m²</small></span></label>
+<label class="opt"><input type="radio" name="tip" value="casa"><span>Casă<small>60–400 m²</small></span></label>
+</div></fieldset>
+<div><div class="area"><label class="lbl" for="mp" style="margin:0">Suprafață</label><output id="mp-out" for="mp">6<small>m²</small></output></div>
+<input type="range" id="mp" name="mp" min="2" max="20" step="1" value="6" aria-valuetext="6 metri pătrați"></div>
+<fieldset><legend>Nivel de finisaj</legend>
+<div class="opts three">
+<label class="opt"><input type="radio" name="fin" value="standard"><span>Standard</span></label>
+<label class="opt"><input type="radio" name="fin" value="premium" checked><span>Premium</span></label>
+<label class="opt"><input type="radio" name="fin" value="lux"><span>Lux</span></label>
+</div></fieldset>
+<label class="chk"><input type="checkbox" name="demolare" checked><span>Demolare și evacuare moloz<small>scoatem vechiul, ducem molozul la groapa autorizată</small></span></label>
+</form>
+<div class="out">
+<div aria-live="polite" aria-atomic="true" style="display:contents">
+<p class="lbl">Preț orientativ, cu materiale</p>
+<p class="rng" id="r-rng">—<small>—</small></p>
+<p class="dur"><b id="r-dur">—</b><span id="r-dur2">durată estimată</span></p>
+</div>
+<ul class="split" id="r-split" aria-label="Defalcare estimativă"></ul>
+<a class="btn" href="#oferta" data-to-offer>Cere ofertă pentru această estimare</a>
+<p class="note">Prețuri și durate de exemplu, cu TVA. Nu includ mobilierul și electrocasnicele.</p>
+</div>
+</div>
+</div></section>
+
+<section id="proiecte"><div class="wrap">
+<div class="sh"><span class="no">02</span><h2>Înainte și după</h2><p>Trage de mâner (sau folosește săgețile) pe fiecare proiect ca să vezi diferența. Planșe demonstrative, în culorile finale alese de clienți.</p></div>
+<div class="proj">
+<article><div class="cmp" style="--wall:#e9efec;--floor:repeating-linear-gradient(90deg,#d9d6d0 0 1px,#e6e3dd 1px 40px);--acc:#6f8f8a"><div class="bef"></div><div class="aft"><i></i></div><span class="tagb">Înainte</span><span class="taga">După</span><span class="line"></span><input type="range" min="0" max="100" step="1" value="50" aria-label="Compară înainte și după: baie în bloc, 6 m²" data-cmp></div>
+<h3>Baie în bloc, 6 m²</h3><dl><div><dt>Durată</dt><dd>14 zile</dd></div><div><dt>Buget</dt><dd>38.000 lei</dd></div><div><dt>Oraș</dt><dd>[Oraș]</dd></div></dl></article>
+<article><div class="cmp" style="--wall:#f3ece1;--acc:#c4532d"><div class="bef"></div><div class="aft"><i></i></div><span class="tagb">Înainte</span><span class="taga">După</span><span class="line"></span><input type="range" min="0" max="100" step="1" value="50" aria-label="Compară înainte și după: apartament 3 camere, 72 m²" data-cmp></div>
+<h3>Apartament 3 camere, 72 m²</h3><dl><div><dt>Durată</dt><dd>9 săptămâni</dd></div><div><dt>Buget</dt><dd>142.000 lei</dd></div><div><dt>Oraș</dt><dd>[Oraș]</dd></div></dl></article>
+<article><div class="cmp" style="--wall:#2b2926;--floor:repeating-linear-gradient(90deg,#8a6a4c 0 1px,#9a7756 1px 64px);--acc:#e8a383"><div class="bef"></div><div class="aft"><i></i></div><span class="tagb">Înainte</span><span class="taga">După</span><span class="line"></span><input type="range" min="0" max="100" step="1" value="50" aria-label="Compară înainte și după: casă din anii ’80, 140 m²" data-cmp></div>
+<h3>Casă din anii ’80, 140 m²</h3><dl><div><dt>Durată</dt><dd>5 luni</dd></div><div><dt>Buget</dt><dd>395.000 lei</dd></div><div><dt>Oraș</dt><dd>[Oraș]</dd></div></dl></article>
+</div>
+<p class="note">Proiecte și bugete demonstrative.</p>
+</div></section>
+
+<section id="etape" style="padding-top:0"><div class="wrap">
+<div class="sh"><span class="no">03</span><h2>Cum lucrăm</h2><p>Cinci etape, fiecare cu dată în contract. Primești poze din șantier la finalul fiecărei zile.</p></div>
+<ol class="steps">
+<li><h3>Vizită și măsurători</h3><p>Venim gratuit, măsurăm, discutăm ce vrei și ce se poate face.</p><span>Ziua 1</span></li>
+<li><h3>Proiect și ofertă</h3><p>Primești randări simple, lista de materiale și prețul fix, pe etape.</p><span>3–5 zile</span></li>
+<li><h3>Demolare și instalații</h3><p>Scoatem vechiul, refacem instalațiile electrice și sanitare, cu verificări.</p><span>Săpt. 1–2</span></li>
+<li><h3>Finisaje</h3><p>Tencuieli, gresie, faianță, parchet, vopsea. Totul cu materialele alese de tine.</p><span>Săpt. 2–6</span></li>
+<li><h3>Curățenie și predare</h3><p>Facem curățenia finală și verificăm împreună fiecare detaliu, pe listă.</p><span>Ultima zi</span></li>
+</ol>
+</div></section>
+
+<section class="gar" id="garantie"><div class="wrap gar-grid">
+<p class="big" aria-label="5 ani garanție">5<span>ani</span></p>
+<div><p class="kick">Garanție scrisă</p><h2 style="font-size:clamp(36px,4.4vw,60px);margin-top:14px">Dacă ceva nu e bine, revenim noi.</h2>
+<ul><li><div><b>Preț fix în contract.</b> Nu apar costuri noi fără acordul tău scris.</div></li><li><div><b>Penalități pentru întârziere.</b> Plătim noi pentru fiecare zi peste termen.</div></li><li><div><b>Plata pe etape.</b> Plătești doar ce e terminat și verificat.</div></li><li><div><b>Garanție 5 ani.</b> Pentru instalații și finisaje, cu intervenție în 48 de ore.</div></li></ul>
+<p class="note">Condiții demonstrative.</p></div>
+</div></section>
+
+<section id="recenzii"><div class="wrap">
+<div class="sh"><span class="no">04</span><h2>Spun clienții</h2></div>
+<p class="rev-tag">Exemple – se înlocuiesc cu recenziile reale ale firmei</p>
+<div class="revs">
+<figure><blockquote>„Am plecat două luni din țară și m-am întors într-un apartament nou. Am primit poze în fiecare seară și n-a fost niciun leu în plus față de ofertă.”</blockquote><figcaption><b>Andreea și Mihai T.</b>apartament 3 camere, 72 m²</figcaption></figure>
+<figure><blockquote>„Baia a fost gata în 13 zile. Echipa a lăsat totul curat la final de zi.”</blockquote><figcaption><b>Sorin P.</b>baie, 5 m²</figcaption></figure>
+<figure><blockquote>„Ne-au ajutat să alegem materialele în buget. Casa arată ca din revistă.”</blockquote><figcaption><b>Familia D.</b>casă, 140 m²</figcaption></figure>
+</div>
+</div></section>
+
+<section id="oferta" style="background:var(--paper2)"><div class="wrap of-grid">
+<div class="ct">
+<div class="sh" style="grid-template-columns:auto 1fr;margin-bottom:24px"><span class="no">05</span><h2>Cere oferta</h2></div>
+<p style="color:var(--muted);margin:0 0 10px">Răspundem în aceeași zi lucrătoare. Pentru o estimare mai bună, atașează câteva poze cu spațiul de acum.</p>
+<a class="tel" href="tel:+40700000000">0700 000 000</a>
+<dl><dt>Birou</dt><dd>Str. Exemplu nr. 12, [Oraș]</dd><dt>Program</dt><dd>Luni–Vineri, 08:00–18:00</dd><dt>Zonă</dt><dd>[Oraș] și 60 km în jur</dd></dl>
+</div>
+<div id="oferta-box">
+<form class="form" id="oferta-form" name="renovari-lacheie" method="POST" action="/multumim.html" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" aria-label="Cerere de ofertă LaCheie">
+<input type="hidden" name="form-name" value="renovari-lacheie">
+<p class="hp" aria-hidden="true"><label>Nu completa acest câmp<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+<div class="row"><label>Tip lucrare<select name="tip" id="f-tip"><option value="Baie">Baie</option><option value="Bucătărie">Bucătărie</option><option value="Apartament complet">Apartament complet</option><option value="Casă">Casă</option></select></label>
+<label>Nivel de finisaj<select name="nivel" id="f-nivel"><option value="Standard">Standard</option><option value="Premium" selected>Premium</option><option value="Lux">Lux</option></select></label></div>
+<div class="row"><label>Suprafață (m²)<input name="suprafata" id="f-mp" type="number" min="1" max="1000" inputmode="numeric" value="6" required></label>
+<label>Oraș<input name="oras" id="f-oras" placeholder="ex. [Oraș]" autocomplete="address-level2" required></label></div>
+<label class="chk2"><input type="checkbox" name="demolare" id="f-dem" value="Da" checked>Include demolare și evacuare moloz</label>
+<label>Estimare din calculator<input name="estimare" id="f-est" readonly placeholder="Folosește calculatorul de mai sus (opțional)"></label>
+<div class="row"><label>Termen dorit<select name="termen" id="f-termen"><option>Cât mai repede</option><option selected>În 1–3 luni</option><option>În 3–6 luni</option><option>Sunt flexibil</option></select></label>
+<label>Numele tău<input name="nume" id="f-nume" autocomplete="name" required></label></div>
+<label>Telefon<input name="telefon" id="f-tel" type="tel" autocomplete="tel" required></label>
+<label>Mesaj<textarea name="mesaj" id="f-msg" placeholder="Ce vrei să schimbi? Ai deja materiale alese?"></textarea></label>
+<label class="file" id="f-filebox"><b aria-hidden="true">+</b><span id="f-files"><strong style="color:var(--coal)">Adaugă poze</strong> (opțional) · JPG sau PNG, maximum 10, în total până la 8 MB</span><input type="file" name="poza1" accept="image/jpeg,image/png,.jpg,.jpeg,.png" multiple id="f-poze" aria-describedby="f-err"></label>
+<p class="ferr" id="f-err" role="alert"></p>
+<div hidden><input type="file" name="poza2" tabindex="-1"><input type="file" name="poza3" tabindex="-1"><input type="file" name="poza4" tabindex="-1"><input type="file" name="poza5" tabindex="-1"><input type="file" name="poza6" tabindex="-1"><input type="file" name="poza7" tabindex="-1"><input type="file" name="poza8" tabindex="-1"><input type="file" name="poza9" tabindex="-1"><input type="file" name="poza10" tabindex="-1"></div>
+<div class="acts"><button class="btn btn-t" type="submit" id="f-send">Trimite cererea de ofertă</button><a class="btn btn-l" href="https://wa.me/40700000000" id="f-wa" target="_blank" rel="noopener">Trimite pe WhatsApp</a></div>
+<p class="small">Pe WhatsApp trimitem același rezumat; pozele le atașezi direct în conversație.</p>
+</form>
+</div>
+</div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+<span>© LaCheie · renovări la cheie · date de exemplu</span><a href="#acasa">Înapoi sus ↑</a>
+<p class="made" style="margin:0"><span>Machetă demo · Site realizat de CristianWeb</span><a href="https://cristianweb.ro" target="_blank" rel="noopener">Vreau un site ca acesta →</a></p>
+</div></footer>
+
+<nav class="dock" aria-label="Contact rapid"><a class="d-call" href="tel:+40700000000">Sună acum</a><a class="d-wa" href="https://wa.me/40700000000" data-wa="dock" target="_blank" rel="noopener">WhatsApp</a></nav>
+<script src="js/data.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>
